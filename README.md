@@ -119,3 +119,29 @@ class main{
 }
 ```
 ![Output for 2b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/7f5f671fae9854dd6d51fd098bf7fc0140667abc/exp2b.png)
+
+## Title:2c(Implement Constructor)
+```
+class student{
+ String sname;
+ int sage;
+ double smarks;
+ student(String name,int age,double marks){
+   sname=name;
+   sage=age;
+   smarks=marks;
+  }
+ void display(){
+  System.out.println("student name is :"+sname);
+  System.out.println("student age is :"+sage);
+  System.out.println("stduent marks is:"+smarks);
+  }
+}
+class main{
+ public static void main(String args[]){
+  student std= new student("sree",12,960);
+  std.display();
+  }
+}
+```
+![Output for 2c](
