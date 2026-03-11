@@ -144,4 +144,4 @@ class main{
   }
 }
 ```
-![Output for 2c](
+![Output for 2c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/1bd32a571064b5de2ceb943d5f090b55c450ed94/exp2c.png)
