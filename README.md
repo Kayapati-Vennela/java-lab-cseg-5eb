@@ -68,6 +68,7 @@ class Quadraticequation{
 ## output:
 ![Output for 1b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/71f07a8625ee827708e72613f4fc6788a302f092/exp1b.png)
 
+## Experiment 2
 ## Title:2a(Implement Class Mechanism)
 ```
 class Rectangle{
@@ -94,3 +95,27 @@ class main{
 ```
 ## output:
 ![Output for 2a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/ad96d82fa13038b9e1cecc1775f2cfd2fb5062cc/exp2a.png)
+
+## Title:2b(Implement Overloading Method)
+```
+class sum{
+  int sum(int a ,int b){
+    return a+b;
+  }
+  int sum(int a ,int b,int c){
+  return a+b+c;
+  }
+  double sum(double a ,double b){
+   return a+b;
+  }
+}
+class main{
+ public static void main(String args[]){
+   sum s= new sum();
+   System.out.println("sum of 2 integers:"+s.sum(20,16));
+   System.out.println("sum of 3 integers:"+s.sum(20,16,17));
+   System.out.println("sum of two real numbers:"+s.sum(30.465,15.675));
+  }
+}
+```
+![Output for 2b]
