@@ -28,7 +28,7 @@ class DefaultPrimitiveType {
 ## output:
 ![Output for 1a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/3a3a9e73ff576021fce821d401979f57f9ded17c/exp1a.png)
 
-## Title:1a(Implement Quadratic Equation Solution)
+## Title:1b(Implement Quadratic Equation Solution)
 ```
 import java.util.Scanner;
 class Quadraticequation{
@@ -67,3 +67,30 @@ class Quadraticequation{
 ```
 ## output:
 ![Output for 1b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/71f07a8625ee827708e72613f4fc6788a302f092/exp1b.png)
+
+## Title:2a(Implement Class Mechanism)
+```
+class Rectangle{
+  double l;
+  double b;
+  double area(){
+    return l*b;
+  }
+  double perimeter(){
+   return 2*(l+b);
+   }
+ }
+class main{
+  public static void main(String args[]){
+    Rectangle rect =new Rectangle();
+    rect.l=6;
+    rect.b=12;
+    double area = rect.area();
+    double perimeter =rect.perimeter();
+    System.out.println("area is:" +area);
+    System.out.println("perimeter is:" +perimeter);
+    }
+  }
+```
+## output:
+![Output for 2a]
