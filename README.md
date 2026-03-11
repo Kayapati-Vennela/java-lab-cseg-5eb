@@ -118,4 +118,4 @@ class main{
   }
 }
 ```
-![Output for 2b]
+![Output for 2b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/7f5f671fae9854dd6d51fd098bf7fc0140667abc/exp2b.png)
