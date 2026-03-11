@@ -1,2 +1,27 @@
-# java-lab-cseg-5eb
+<img width="614" height="650" alt="image" src="https://github.com/user-attachments/assets/627819e0-dc51-4ee6-bfe7-10b2518f1333" /># java-lab-cseg-5eb
 Experiments
+## Experiment 1
+## Title:1a(Implement Default Primitive Type)
+```
+class DefaultPrimitiveType {
+    byte primbyte;
+    short primshort;
+    int primint;
+    double primdouble;
+    char primchar;
+    float primfloat;
+    long primlong;
+    boolean primboolean;
+    public static void main(String args[]) {
+        DefaultPrimitiveType dDpt = new DefaultPrimitiveType();
+        System.out.println("default value of byte:" + dDpt.primbyte);
+        System.out.println("default value of short:" + dDpt.primshort);
+        System.out.println("default value of int:" + dDpt.primint);
+        System.out.println("default value of double:" + dDpt.primdouble);
+        System.out.println("default value of char:" + dDpt.primchar + " '");
+        System.out.println("default value of float:" + dDpt.primfloat);
+        System.out.println("default value of long:" + dDpt.primlong);
+        System.out.println("default value of boolean:" + dDpt.primboolean);
+    }
+}
+```
