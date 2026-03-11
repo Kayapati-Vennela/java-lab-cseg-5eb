@@ -66,4 +66,4 @@ class Quadraticequation{
    }
 ```
 ## output:
-![Output for 1b]
+![Output for 1b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/71f07a8625ee827708e72613f4fc6788a302f092/exp1b.png)
