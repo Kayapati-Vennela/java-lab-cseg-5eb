@@ -27,3 +27,43 @@ class DefaultPrimitiveType {
 ```
 ## output:
 ![Output for 1a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/3a3a9e73ff576021fce821d401979f57f9ded17c/exp1a.png)
+
+## Title:1a(Implement Quadratic Equation Solution)
+```
+import java.util.Scanner;
+class Quadraticequation{
+     public static void main(String args[]){
+         Scanner sc=new Scanner(System.in);
+         System.out.println("Enter value of a:");
+         double a=sc.nextDouble();
+          System.out.println("Enter value of b:");
+         double b=sc.nextDouble();
+          System.out.println("Enter value of c:");
+         double c=sc.nextDouble();
+         double D=b*b-4*a*c;
+         if(D>0){
+            System.out.println("Roots are real and distinct");
+            double root1=(-b+Math.sqrt(D))/(2*a);
+            double root2=(-b-Math.sqrt(D))/(2*a);
+            System.out.println("Root1:"+root1);
+            System.out.println("Root2:"+root2);
+            }
+         else if(D==0){
+            System.out.println("Roots are equal and real");
+            double root=-b/(2*a);
+            System.out.println("Root:"+root);
+            }
+         else{
+            System.out.println("Roots are complex and imaginary");
+            double realpart=-b/(2*a);
+            double imaginarypart=Math.sqrt(-D)/(2*a);
+            System.out.println("Roots are complex and imaginary");
+            System.out.println("Root1="+realpart+"+i"+imaginarypart);
+            System.out.println("Root2="+realpart+"-i"+imaginarypart);
+            }
+        sc.close();
+        }
+   }
+```
+## output:
+![Output for 1b]
