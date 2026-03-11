@@ -25,3 +25,5 @@ class DefaultPrimitiveType {
     }
 }
 ```
+## output:
+![Output for 1a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/3a3a9e73ff576021fce821d401979f57f9ded17c/exp1a.png)
