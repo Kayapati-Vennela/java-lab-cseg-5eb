@@ -626,3 +626,40 @@ class BuiltInException {
 }
 ```
 ![output for 6c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/d046987653a9158f4a562632d0468e095bf6cc5b/exp6c.png)
+
+## Experiment 7
+## Title:7a(User Defined Exception)
+```
+class InvalidCountryException extends Exception {
+          InvalidCountryException() {
+              super();
+              }
+              InvalidCountryException(String message) {
+              super(message);
+              }
+            }
+class UserRegion {
+
+    void registerUser(String userName, String userCountry) throws InvalidCountryException {
+
+        if (!userCountry.equals("India")) {
+            throw new InvalidCountryException("User outside India cannot be registered");
+        } else {
+            System.out.println("User registration done successfully");
+        }
+    }
+
+    public static void main(String args[]) {
+
+        UserRegion ur = new UserRegion();
+
+        try {
+            ur.registerUser("Ravi", "USA");
+        }
+        catch (InvalidCountryException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+![output for 7a]()
