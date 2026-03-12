@@ -523,4 +523,31 @@ class Deletechar{
    }
 }
 ```
-![output for 5c]()
+![output for 5c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/ce000845732419ebf47acfd6931c95cf159c76f0/exp5c.png)
+
+## Experiment 6
+## Title:6a(Exception Handling)
+```
+import java.util.Scanner;
+class ArrayIndexExceptionDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        try {
+            System.out.print("Enter index to access: ");
+            int index = sc.nextInt();
+            System.out.println("Element at index " + index + " is " + arr[index]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index out of bounds!");
+        }
+        sc.close();
+    }
+}
+```
+![output for 6a]()
