@@ -800,4 +800,108 @@ class TestDaemon{
          }
 }
 ```
-![output for 8a]()
+![output for 8a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/0b6dfb8941316e9a74b69c9a96ebb28153f254e1/exp8a.png)
+
+## Title:8b(Producer Consumer Problem)
+```
+class Buffer {
+       int[] buffer;
+       int count = 0;
+       int in = 0, out = 0;
+       Buffer(int size) {
+         buffer = new int[size];
+       }
+}
+class Consumer {
+
+    int[] buffer;
+    int count;
+    int out = 0;
+
+    Consumer(int[] buffer, int count) {
+        this.buffer = buffer;
+        this.count = count;
+    }
+
+    synchronized int consume() {
+        while (count == 0) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+            }
+        }
+
+        int item = buffer[out];
+        out = (out + 1) % buffer.length;
+        count--;
+        notify();
+        return item;
+    }
+}
+class Producer {
+
+    int[] buffer;
+    int count = 0;
+    int in = 0;
+
+    Producer(int size) {
+        buffer = new int[size];
+    }
+
+    synchronized void produce(int item) {
+        while (count == buffer.length) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+            }
+        }
+
+        buffer[in] = item;
+        in = (in + 1) % buffer.length;
+        count++;
+        notify();
+    }
+}
+class Producer extends Thread {
+    Buffer buffer;
+
+    Producer(Buffer buffer) {
+        this.buffer = buffer;
+    }
+
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            buffer.produce(i);
+            System.out.println("Produced: " + i);
+        }
+    }
+}
+
+  class SharedBuffer {
+    int [] buffer;
+    int count = 0;
+    int in = 0, out = 0;
+    Buffer(int size) {
+       buffer new int[size];
+  class SharedBuffer {
+       int[] buffer;
+       int count = 0;
+       int in = 0, out = 0;
+       Buffer(int size) {
+         buffer = new int[size];
+       }
+public class ProducerConsumerDemo {
+    public static void main(String[] args) {
+
+        Buffer buffer = new Buffer(5);
+        int N = 10;
+
+        Producer p = new Producer(buffer, N);
+        Consumer c = new Consumer(buffer, N);
+
+        p.start();
+        c.start();
+    }
+}
+```
+![output for 8b]()
