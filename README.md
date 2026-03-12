@@ -145,3 +145,36 @@ class main{
 }
 ```
 ![Output for 2c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/1bd32a571064b5de2ceb943d5f090b55c450ed94/exp2c.png)
+
+
+## Experiment 3
+## Title:3a(Implement Constructor Overload)
+```
+class student{
+ String name;
+ int age;
+ double marks;
+ student(){
+ }
+ student(String name,int age,double marks){
+  this.name=name;
+  this.age=age;
+  this.marks=marks;
+}
+void display(){
+  System.out.println("name:"+name);
+  System.out.println("age:"+age);
+  System.out.println("marks:"+marks);
+  }
+}
+
+class main{
+ public static void main(String args[]){
+   student std= new student();
+   std.display();
+   student std1=new student ("sree",19,60);
+   std1.display();
+ }
+}
+```
+![Output for 3a](
