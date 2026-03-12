@@ -805,46 +805,11 @@ class TestDaemon{
 ## Title:8b(Producer Consumer Problem)
 ```
 class Buffer {
-       int[] buffer;
-       int count = 0;
-       int in = 0, out = 0;
-       Buffer(int size) {
-         buffer = new int[size];
-       }
-}
-class Consumer {
-
-    int[] buffer;
-    int count;
-    int out = 0;
-
-    Consumer(int[] buffer, int count) {
-        this.buffer = buffer;
-        this.count = count;
-    }
-
-    synchronized int consume() {
-        while (count == 0) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-            }
-        }
-
-        int item = buffer[out];
-        out = (out + 1) % buffer.length;
-        count--;
-        notify();
-        return item;
-    }
-}
-class Producer {
-
     int[] buffer;
     int count = 0;
-    int in = 0;
+    int in = 0, out = 0;
 
-    Producer(int size) {
+    Buffer(int size) {
         buffer = new int[size];
     }
 
@@ -852,44 +817,68 @@ class Producer {
         while (count == buffer.length) {
             try {
                 wait();
-            } catch (InterruptedException e) {
-            }
+            } catch (InterruptedException e) {}
         }
 
         buffer[in] = item;
         in = (in + 1) % buffer.length;
         count++;
+
         notify();
+
+        System.out.println("Produced: " + item);
+    }
+
+    synchronized int consume() {
+        while (count == 0) {
+            try {
+                wait();
+            } catch (InterruptedException e) {}
+        }
+
+        int item = buffer[out];
+        out = (out + 1) % buffer.length;
+        count--;
+
+        notify();
+
+        System.out.println("Consumed: " + item);
+        return item;
     }
 }
+
 class Producer extends Thread {
     Buffer buffer;
+    int N;
 
-    Producer(Buffer buffer) {
+    Producer(Buffer buffer, int N) {
         this.buffer = buffer;
+        this.N = N;
     }
 
     public void run() {
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= N; i++) {
             buffer.produce(i);
-            System.out.println("Produced: " + i);
         }
     }
 }
 
-  class SharedBuffer {
-    int [] buffer;
-    int count = 0;
-    int in = 0, out = 0;
-    Buffer(int size) {
-       buffer new int[size];
-  class SharedBuffer {
-       int[] buffer;
-       int count = 0;
-       int in = 0, out = 0;
-       Buffer(int size) {
-         buffer = new int[size];
-       }
+class Consumer extends Thread {
+    Buffer buffer;
+    int N;
+
+    Consumer(Buffer buffer, int N) {
+        this.buffer = buffer;
+        this.N = N;
+    }
+
+    public void run() {
+        for (int i = 1; i <= N; i++) {
+            buffer.consume();
+        }
+    }
+}
+
 public class ProducerConsumerDemo {
     public static void main(String[] args) {
 
@@ -904,4 +893,4 @@ public class ProducerConsumerDemo {
     }
 }
 ```
-![output for 8b]()
+![output for 8b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/e35ff680c57a0c6d4bd7feed6d7442e765d9cc31/exp8b.png)
