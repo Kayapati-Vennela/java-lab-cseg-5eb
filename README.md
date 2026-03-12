@@ -759,4 +759,4 @@ public class ThreadDemo {
     }
 }
 ```
-![output for 7c]()
+![output for 7c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/f386a0e2460290cd3776873586ec8090fc955f8d/exp7c.png)
