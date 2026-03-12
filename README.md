@@ -760,3 +760,44 @@ public class ThreadDemo {
 }
 ```
 ![output for 7c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/f386a0e2460290cd3776873586ec8090fc955f8d/exp7c.png)
+
+## Experiment 8
+## Title:8a(Illustrating Daemon Threads)
+```
+class DaemonThread extends Thread {
+     public void run() {
+      while(true) {
+     System.out.println("Daemon thread running");
+      try {
+      Thread.sleep(500);
+       }catch(InterruptedException e) {
+        System.out.print(e);
+         }
+      }
+}
+}
+  class UserThread extends Thread {
+     public void run() {
+          while(true) {
+          for(int i=1;i<=5;i++) {
+            System.out.println("User thread iteration:" +i);
+            try {  
+         Thread.sleep(1000);
+          }catch(InterruptedException e) {
+             System.out.print(e);
+        }
+      }
+    }
+}
+}
+class TestDaemon{
+    public static void main(String[]args){
+              UserThread userThread=new UserThread();
+              DaemonThread daemonThread=new DaemonThread();
+              daemonThread.setDaemon(true);
+              userThread.start();
+              daemonThread.start();
+         }
+}
+```
+![output for 8a]()
