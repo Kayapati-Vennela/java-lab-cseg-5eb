@@ -589,4 +589,40 @@ class MultipleCatchDemo {
         System.out.println("Program continues...");
     }
 ```
-![output for 6b]()
+![output for 6b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/8f1105388900edcc6d5aef5e18c983f81d223144/exp6b.png)
+
+## Title:6c(Implementing java built-in Exception)
+```
+import java.util.Scanner;
+
+class BuiltInException {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter a number to divide 100: ");
+            int n = sc.nextInt();
+
+            int result = 100 / n;
+            System.out.println("Result = " + result);
+
+            int[] arr = new int[3];
+            System.out.println(arr[5]);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception occurred");
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out Of Bounds Exception occurred");
+        }
+        catch (Exception e) {
+            System.out.println("General Exception occured");
+        }
+       finally{
+           System.out.println("Program execution continue...");
+           sc.close();
+       }
+   }
+}
+```
+![output for 6c]()
