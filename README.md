@@ -177,4 +177,4 @@ class main{
  }
 }
 ```
-![Output for 3a](
+![Output for 3a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/9c3307b1deb75fcc2fcdfa49c4525ded4ec8b4e6/exp3a.png)
