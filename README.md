@@ -368,4 +368,49 @@ public class TestVehicle {
     }
 }
 ```
-![output for 4b]()
+![output for 4b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/ab3e7a4c9c4d50cd2da32918dee0a0ccb753e185/exp4b.png)
+
+## Title:4c(Implement Abstract Class)
+```
+abstract class Figure {
+    double dim1, dim2;
+
+    Figure(double d1, double d2) {
+        dim1 = d1;
+        dim2 = d2;
+    }
+
+    abstract double area();
+}
+
+class Rectangle extends Figure {
+    Rectangle(double length, double breadth) {
+        super(length, breadth);
+    }
+
+    double area() {
+        return dim1 * dim2;
+    }
+}
+
+class Triangle extends Figure {
+    Triangle(double base, double height) {
+        super(base, height);
+    }
+
+    double area() {
+        return 0.5 * dim1 * dim2;
+    }
+}
+
+public class TestFigure {
+    public static void main(String[] args) {
+        Figure f1 = new Rectangle(23.4, 14.5);
+        Figure f2 = new Triangle(12.3, 15.6);
+
+        System.out.println("Area of Rectangle = " + f1.area());
+        System.out.println("Area of Triangle = " + f2.area());
+    }
+}
+```
+![output for 4c]()
