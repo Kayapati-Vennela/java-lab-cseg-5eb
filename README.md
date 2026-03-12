@@ -323,4 +323,49 @@ public class TestEmployee {
     }
 }
 ```
-![output for 4a]()
+![output for 4a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/876781dc53cb9c8ef9284035be4be4c865d4cbcf/exp4a.png)
+
+## Title:4b(Implement Multilevel Inheritance)
+```
+class Bicycle {
+    String pedalType;
+
+    void showBicycleInfo() {
+        System.out.println("This is a bicycle with pedals");
+        System.out.println("Pedal Type: " + pedalType);
+    }
+}
+
+class Motorbike extends Bicycle {
+    int engineCapacity;
+
+    void showMotorbikeInfo() {
+        System.out.println("This motorbike has an engine");
+        System.out.println("Engine Capacity: " + engineCapacity + " cc");
+    }
+}
+
+class ElectricBike extends Motorbike {
+    int batteryCapacity;
+
+    void showElectricBikeInfo() {
+        System.out.println("This electric bike has an electric motor & battery");
+        System.out.println("Battery Capacity: " + batteryCapacity + " Wh");
+    }
+}
+
+public class TestVehicle {
+    public static void main(String[] args) {
+        ElectricBike eBike = new ElectricBike();
+
+        eBike.pedalType = "Standard Pedals";
+        eBike.engineCapacity = 250;
+        eBike.batteryCapacity = 500;
+
+        eBike.showBicycleInfo();
+        eBike.showMotorbikeInfo();
+        eBike.showElectricBikeInfo();
+    }
+}
+```
+![output for 4b]()
