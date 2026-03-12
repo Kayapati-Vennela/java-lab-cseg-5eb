@@ -239,3 +239,41 @@ class Main {
 }
 ```
 ![output for 3b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/8f02010c245169ccb3840a204c7c84418ac26a7f/exp3b.png)
+
+## Title:3c(Implement Bubble Sort)
+```
+class BubbleSort {
+    BubbleSort(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+
+            }
+        }
+    }
+}
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of array:");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        new BubbleSort(arr);
+        System.out.println("Sorted array:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+```
+![output for 3c](
