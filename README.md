@@ -662,4 +662,59 @@ class UserRegion {
     }
 }
 ```
-![output for 7a]()
+![output for 7a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/bb41b0a8abd91b3b97b03e5b7c742f810a67af14/exp7a.png)
+
+## Title:7b(Creating threads by extending thread class)
+```
+class GoodMorningThread extends Thread {
+    public void run() {
+        while (true) {
+            System.out.println("Good Morning");
+            try {
+                Thread.sleep(1000); 
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+  class HelloThread extends Thread {
+     public void run() {
+          while(true) {
+            System.out.println("Hello");
+         try {
+            Thread.sleep(2000);
+         }
+         catch(InterruptedException e) {
+               System.out.print(e);
+           }
+        }
+    }
+  }
+   class WelcomeThread extends Thread {
+         public void run() {
+          while(true) {
+        System.out.println("Welcome");
+         try {
+           Thread.sleep(3000);
+         }
+         catch(InterruptedException e) {
+         System.out.print(e);
+         }
+       }
+     }
+   }
+  class TestThreads {
+     public static void main(String args[]) {
+            GoodMorningThread t1 = new GoodMorningThread();
+            HelloThread t2 = new HelloThread();
+            WelcomeThread t3 = new WelcomeThread();
+
+
+            t1.start();
+            t2.start();
+            t3.start();
+           }
+         }
+```
+![output for 7b]()
