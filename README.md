@@ -717,4 +717,4 @@ class GoodMorningThread extends Thread {
            }
          }
 ```
-![output for 7b]()
+![output for 7b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/93756bd837283324cf22baac86a896465d8871ce/exp7b.png)
