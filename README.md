@@ -476,4 +476,4 @@ class Testsort {
     }
 }
 ```
-![output for 5a]()
+![output for 5a](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/c19f737f74201dab7b84f554cbdbcca8c753ba4d/exp5a.png)
