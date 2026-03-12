@@ -894,3 +894,6 @@ public class ProducerConsumerDemo {
 }
 ```
 ![output for 8b](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/e35ff680c57a0c6d4bd7feed6d7442e765d9cc31/exp8b.png)
+
+## Title:8c(Import and use the user defined packages)
+```
