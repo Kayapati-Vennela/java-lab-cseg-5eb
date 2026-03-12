@@ -625,4 +625,4 @@ class BuiltInException {
    }
 }
 ```
-![output for 6c]()
+![output for 6c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/d046987653a9158f4a562632d0468e095bf6cc5b/exp6c.png)
