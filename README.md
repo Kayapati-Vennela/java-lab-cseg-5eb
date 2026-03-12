@@ -276,4 +276,4 @@ class Main {
     }
 }
 ```
-![output for 3c](
+![output for 3c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/41999e8b1c38ee366952459112a107dcb9b782e7/exp3c.png)
