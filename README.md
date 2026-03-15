@@ -897,3 +897,34 @@ public class ProducerConsumerDemo {
 
 ## Title:8c(Import and use the user defined packages)
 ```
+package arithmetic;
+public class ArithmeticOperations {
+    public int add(int x, int y) {
+        return x + y;
+    }
+    public int subtraction(int x, int y) {
+        return x - y;
+    }
+    public int multiplication(int x, int y) {
+        return x * y;
+    }
+    public int division(int x, int y) {
+        return x / y;
+    }
+}
+import arithmetic.ArithmeticOperations;
+class Calculate {
+    public static void main(String[] args) {
+        ArithmeticOperations ae = new ArithmeticOperations();
+        int sum = ae.add(10, 5);
+        System.out.println("Addition: " + sum);
+        int diff = ae.subtraction(10, 5);
+        System.out.println("Subtraction: " + diff);
+        int prod = ae.multiplication(10, 5);
+        System.out.println("Multiplication: " + prod);
+        int div = ae.division(10, 5);
+        System.out.println("Division: " + div);
+    }
+}
+```
+![output for 8c]()
