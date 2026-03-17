@@ -1074,3 +1074,39 @@ class main{
 }
 ```
 ![output for 2](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/81d1a6a64fcb442cf550913b701605d9d480eead/AE_2.png)
+
+## Title:3(Determining string is palindrome or not)
+```
+import java.util.Scanner;
+
+class PalindromeCheck
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String str = sc.nextLine();
+
+        int start = 0;
+        int end = str.length() - 1;
+
+        while(start < end)
+        {
+            if(str.charAt(start) != str.charAt(end))
+            {
+                System.out.println("The string \"" + str + "\" is not a palindrome");
+                sc.close();
+                return;
+            }
+
+            start++;
+            end--;
+        }
+
+        System.out.println("The string \"" + str + "\" is a palindrome");
+        sc.close();
+    }
+}
+```
+![output for 3]()
