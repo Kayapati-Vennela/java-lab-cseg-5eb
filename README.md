@@ -977,3 +977,40 @@ class Person extends Thread {
 }
 ```
 ![output for 11](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/2b47b5fd0f5d20d8c3521e32eb1c4c1d6086c350/exp11.png)
+
+## Additional Experiments
+## Title:1(Inserting Substring in to MainStirng)
+```
+import java.util.Scanner;
+
+class InsertSubstring {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String mainString = sc.nextLine();
+
+        System.out.println("Substring:");
+        String subString = sc.nextLine();
+
+        System.out.println("Position:");
+        int position = sc.nextInt();
+
+        if (position < 0 || position > mainString.length()) {
+            System.out.println("Invalid position");
+        } 
+        else {
+            String firstpart = mainString.substring(0, position);
+            String secondpart = mainString.substring(position);
+
+            String resultstring = firstpart + subString + secondpart;
+
+            System.out.println("The resultant string = " + resultstring);
+        }
+
+        sc.close();
+    }
+}
+```
+![output for 1]()
