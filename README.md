@@ -1073,4 +1073,4 @@ class main{
 }
 }
 ```
-![output for 2]()
+![output for 2](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/81d1a6a64fcb442cf550913b701605d9d480eead/AE_2.png)
