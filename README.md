@@ -976,4 +976,4 @@ class Person extends Thread {
    }
 }
 ```
-![output for 11]()
+![output for 11](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/2b47b5fd0f5d20d8c3521e32eb1c4c1d6086c350/exp11.png)
