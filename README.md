@@ -1224,4 +1224,4 @@ class Cricket
     }
 }
 ```
-![output for 5]()
+![output for 5](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/ca9ad9d957f4645b5c3b2483925828adb022b027/AE_5.png)
