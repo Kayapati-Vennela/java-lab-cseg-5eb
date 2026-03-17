@@ -928,3 +928,52 @@ class Calculate {
 }
 ```
 ![output for 8c](https://github.com/Kayapati-Vennela/java-lab-cseg-5eb/blob/6cf30dd83010274408e122d3ee2bd382b641cc75/exp8c.png)
+
+## Experiment 11
+## Title:11(Railway Reservation)
+```
+class Reservation {
+    private int availableBerths;
+    Reservation(int berths) {
+        this.availableBerths = berths;
+    }
+    public synchronized void bookTicket(String name, int requestedBerths) {
+        System.out.println(name + " is requesting " + requestedBerths + " berths.");
+        if (requestedBerths <= availableBerths) {
+            System.out.println("Berths available. Booking for " + name);
+            availableBerths -= requestedBerths;
+            System.out.println("Ticket booked for " + name);
+            System.out.println("Remaining berths: " + availableBerths);
+        } else {
+            System.out.println("No berths available for " + name);
+        }
+        System.out.println("--------------------------------");
+    }
+}
+class Person extends Thread {
+    private Reservation reservation;
+    private String personName;
+    private int berthsNeeded;
+    Person(Reservation reservation, String name, int berths) {
+        this.reservation = reservation;
+        this.personName = name;
+        this.berthsNeeded = berths;
+    }
+    public void run() {
+        reservation.bookTicket(personName, berthsNeeded);
+    }
+}
+ public class RailwayReservation {
+    public static void main(String[] args) {
+        Reservation reservation = new Reservation(5);
+        Person p1 = new Person(reservation, "Vishnu", 2);
+        Person p2 = new Person(reservation, "Siri", 3);
+        Person p3 = new Person(reservation, "Neha", 2);
+        p1.start();
+        p2.start();
+        p3.start();
+
+   }
+}
+```
+![output for 11]()
